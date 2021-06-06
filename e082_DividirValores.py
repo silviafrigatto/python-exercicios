@@ -22,6 +22,6 @@ print("*" * 50)
 print(f"Lista de números digitados: {sorted(lista_A)}")
 print(f"Lista de números pares: {sorted(lista_B)}")
 print(f"Lista de números ímpares: {sorted(lista_C)}")
-print(f"Lista com todos os valores: {lista_A + lista_B + lista_C}")
+print(f"Lista com todos os valores: {sorted(lista_A) + sorted(lista_B) + sorted(lista_C)}")
 
 
