@@ -15,3 +15,4 @@ def leiaInt(msg):
 
 n = str(leiaInt("Digite um número: "))
 
+
