@@ -1,6 +1,5 @@
-#  Módulo criado para o exercício 108.
-#  Exercicio 108: Adapte o código do desafio #107, criando uma função adicional
-#  chamada moeda() que consiga mostrar os números como um valor monetário formatado.
+#  Módulo criado para o exercício 110.
+
 
 def aumentar(valor, taxa=0, formatado=False):
     '''
@@ -13,7 +12,8 @@ def aumentar(valor, taxa=0, formatado=False):
     aumento = valor + (valor * (taxa / 100))
     if formatado:
         return moeda(aumento)
-    return aumento
+    else:
+        return aumento
 
 
 def diminuir(valor, taxa=0, formatado=False):
@@ -27,7 +27,8 @@ def diminuir(valor, taxa=0, formatado=False):
     desconto = valor - (valor * (taxa / 100))
     if formatado:
         return moeda(desconto)
-    return desconto
+    else:
+        return desconto
 
 
 def dobro(valor, formatado=False):
@@ -40,7 +41,8 @@ def dobro(valor, formatado=False):
     dobrar = valor * 2
     if formatado:
         return moeda(dobrar)
-    return dobrar
+    else:
+        return dobrar
 
 
 def metade(valor, formatado=False):
@@ -53,10 +55,17 @@ def metade(valor, formatado=False):
     dividir = valor / 2
     if formatado:
         return moeda(dividir)
-    return dividir
+    else:
+        return dividir
 
 
 def moeda(valor=0, cifra="R$"):
+    '''
+    => Função que formata valores como monetários.
+    :param valor: Valor a ser formatado.
+    :param cifra: Tipo de moeda.
+    :return: Retorna o valor em formato monetário.
+    '''
     return f"{cifra}{valor:.2f}".replace(".", ",")
 
 
@@ -72,5 +81,5 @@ def resumo(valor=0, aumento=10, desconto=5):
     print(f"Metade do preço: \t{metade(valor, True)}")
     print(f"Dobro do preço: \t{dobro(valor, True)}")
     print(f"{aumento}% de aumento: \t{aumentar(valor, aumento, True)}")
-    print(f"{desconto}% de desconto: \t{diminuir(valor, aumento, True)}")
+    print(f"{desconto}% de desconto: \t{diminuir(valor, desconto, True)}")
     print("-" * 30)
