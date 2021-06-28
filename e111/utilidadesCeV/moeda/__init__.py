@@ -81,4 +81,4 @@ def resumo(valor=0, aumento=10, desconto=5):
     print(f"Dobro do preço: \t{dobro(valor, True)}")
     print(f"{aumento}% de aumento: \t{aumentar(valor, aumento, True)}")
     print(f"{desconto}% de desconto: \t{diminuir(valor, desconto, True)}")
-    print("-" * 30)
+    return "-" * 30
