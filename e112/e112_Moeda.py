@@ -4,6 +4,10 @@
 #  apenas valores que seja monetários.
 
 from utilidadesCeV import moeda
+from utilidadesCeV import dado
 
-preco = float(input("Digite o preço: R$"))
-print(moeda.resumo(preco, 20, 12))
+
+preco = dado.leiaMoeda("Digite o preço: R$")
+moeda.resumo(preco, 20, 12)
+
+
